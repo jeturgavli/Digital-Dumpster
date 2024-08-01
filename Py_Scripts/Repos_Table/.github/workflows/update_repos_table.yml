@@ -1,0 +1,35 @@
+name: Update Repos Table
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # Har din midnight ko run karega
+  workflow_dispatch: # Manual trigger karne ke liye
+
+jobs:
+  update-table:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run script
+        run: python repos_table.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'Update repos table'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
