@@ -2,8 +2,8 @@ name: Update Repos Table
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # Har 5 minute mein run karega
-  workflow_dispatch: # Manual trigger karne ke liye
+    - cron: "*/5 * * * *" # Runs every 5 minutes
+  workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
   update-table:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Run script
         run: |
-          python repos_table.py
+          python Py_Scripts/Repos_Table/create_repos_table.py  # Update the path to the script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md
+          git add Py_Scripts/Repos_Table/REPO_TABLE.md  # Update the path to the README file
           git commit -m 'Update repos table'
           git push
         env:
