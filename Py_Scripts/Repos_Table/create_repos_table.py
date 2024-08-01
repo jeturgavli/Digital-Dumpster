@@ -20,7 +20,8 @@ def generate_markdown_table(repos):
 
 def update_readme(table):
     try:
-        with open("README.md", "r") as file:
+        readme_path = "Py_Scripts/Repos_Table/REPO_TABLE.md"
+        with open(readme_path, "r") as file:
             readme = file.readlines()
 
         start_index = readme.index("<!-- REPOS-START -->\n")
@@ -28,11 +29,11 @@ def update_readme(table):
 
         new_readme = readme[:start_index + 1] + [table] + readme[end_index:]
 
-        with open("README.md", "w") as file:
+        with open(readme_path, "w") as file:
             file.writelines(new_readme)
-        print("README.md updated successfully.")
+        print("REPO_TABLE.md updated successfully.")
     except Exception as e:
-        print(f"Error updating README.md: {e}")
+        print(f"Error updating REPO_TABLE.md: {e}")
 
 if __name__ == "__main__":
     repos = fetch_repos()
