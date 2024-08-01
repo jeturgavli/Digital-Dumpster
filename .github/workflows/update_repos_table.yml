@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3 # Updated to v3
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v4 # Updated to v4
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
@@ -22,17 +22,19 @@ jobs:
         run: pip install requests
 
       - name: Run script
-        run: |
-          python Py_Scripts/Repos_Table/create_repos_table.py  # Update the path to the script
+        run: python Py_Scripts/Repos_Table/create_repos_table.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Show modified files
+        run: git status
 
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add Py_Scripts/Repos_Table/REPO_TABLE.md  # Update the path to the README file
-          git commit -m 'Update repos table'
+          git add Py_Scripts/Repos_Table/REPO_TABLE.md
+          git commit -m 'Update repos table' || echo "Nothing to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
