@@ -1,5 +1,4 @@
 import requests
-import os
 
 def fetch_repos():
     username = "jeturgavli"
@@ -15,7 +14,7 @@ def fetch_repos():
 def generate_markdown_table(repos):
     markdown_table = "| Name | Description | URL |\n|------|-------------|-----|\n"
     for repo in repos:
-        markdown_table += f"| {repo['name']} | {repo['description']} | {repo['html_url']} |\n"
+        markdown_table += f"| {repo['name']} | {repo['description'] or 'No description'} | {repo['html_url']} |\n"
     return markdown_table
 
 def update_readme(table):
@@ -31,6 +30,9 @@ def update_readme(table):
 
         with open(readme_path, "w") as file:
             file.writelines(new_readme)
+        
+        print("Generated Markdown Table:")
+        print(table)
         print("REPO_TABLE.md updated successfully.")
     except Exception as e:
         print(f"Error updating REPO_TABLE.md: {e}")
