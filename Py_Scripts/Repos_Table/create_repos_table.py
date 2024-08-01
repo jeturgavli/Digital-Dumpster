@@ -1,36 +1,43 @@
 import requests
+import os
 
-def fetch_repos(username):
+def fetch_repos():
+    username = "jeturgavli"
     url = f"https://api.github.com/users/{username}/repos"
     response = requests.get(url)
-    return response.json()
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Error fetching repos: {response.status_code}")
+        print(response.text)
+        return []
 
 def generate_markdown_table(repos):
-    table = "| Repository Name | Description | Stars | Forks |\n"
-    table += "|-----------------|-------------|-------|-------|\n"
-    
+    markdown_table = "| Name | Description | URL |\n|------|-------------|-----|\n"
     for repo in repos:
-        name = repo['name']
-        description = repo['description'] or "No description"
-        stars = repo['stargazers_count']
-        forks = repo['forks_count']
-        repo_url = repo['html_url']
-        
-        table += f"| [{name}]({repo_url}) | {description} | ![Stars](https://img.shields.io/github/stars/{username}/{name}) | ![Forks](https://img.shields.io/github/forks/{username}/{name}) |\n"
-    
-    return table
+        markdown_table += f"| {repo['name']} | {repo['description']} | {repo['html_url']} |\n"
+    return markdown_table
 
-username = "jeturgavli"
-repos = fetch_repos(username)
-markdown_table = generate_markdown_table(repos)
+def update_readme(table):
+    try:
+        with open("README.md", "r") as file:
+            readme = file.readlines()
 
-with open("REPO_TABLE.md", "r", encoding="utf-8") as file:
-    lines = file.readlines()
+        start_index = readme.index("<!-- REPOS-START -->\n")
+        end_index = readme.index("<!-- REPOS-END -->\n")
 
-start_index = lines.index("<!-- repos start -->\n") + 1
-end_index = lines.index("<!-- repos end -->\n")
+        new_readme = readme[:start_index + 1] + [table] + readme[end_index:]
 
-new_lines = lines[:start_index] + [markdown_table] + lines[end_index:]
+        with open("README.md", "w") as file:
+            file.writelines(new_readme)
+        print("README.md updated successfully.")
+    except Exception as e:
+        print(f"Error updating README.md: {e}")
 
-with open("REPO_TABLE.md", "w", encoding="utf-8") as file:
-    file.writelines(new_lines)
+if __name__ == "__main__":
+    repos = fetch_repos()
+    if repos:
+        markdown_table = generate_markdown_table(repos)
+        update_readme(markdown_table)
+    else:
+        print("No repositories found or failed to fetch repositories.")
