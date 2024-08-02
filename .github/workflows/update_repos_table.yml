@@ -2,7 +2,7 @@ name: Update Repos Table
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # Har 5 minute mein run kare
+    - cron: "0 */6 * * *" # Har 6 hour mein run karega
   workflow_dispatch: # Manual trigger allow kare
 
 jobs:

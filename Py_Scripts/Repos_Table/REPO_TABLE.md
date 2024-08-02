@@ -3,8 +3,6 @@
 <!-- REPOS-START -->
 | Name | Description | URL |
 |------|-------------|-----|
-| Age_Calculator- | using javascript and html and css | [Link](https://github.com/jeturgavli/Age_Calculator-) |
-| Anushka-Chaudhary07 | Config files for my GitHub profile. | [Link](https://github.com/jeturgavli/Anushka-Chaudhary07) |
 | Daily_Python_Teaching | Daily Learning Python Repo | [Link](https://github.com/jeturgavli/Daily_Python_Teaching) |
 | Delete_Repo_Program | This script dynamically manages GitHub repositories, listing and deleting selections via API integration. | [Link](https://github.com/jeturgavli/Delete_Repo_Program) |
 | Digital-Dumpster | This is my secret stash of digital oddities, where I store everything from fish burgers to other quirky experiments. It’s not fancy, but when I need something, it’s my go-to spot. Think of it as my digital junk drawer – not perfect, but it gets the job done! | [Link](https://github.com/jeturgavli/Digital-Dumpster) |
@@ -14,11 +12,9 @@
 | ImageToText | Screenshot Image to Text Data Extract into excel File | [Link](https://github.com/jeturgavli/ImageToText) |
 | Instagram_Captions_Contribution | Contribute and explore a curated collection of Instagram captions! This Flask-based web application allows users to submit their own captions, view existing captions, and copy them to the clipboard. Join our community and share your creativity! | [Link](https://github.com/jeturgavli/Instagram_Captions_Contribution) |
 | jeturgavli | No description | [Link](https://github.com/jeturgavli/jeturgavli) |
-| open-source-practice | Repo for you to raise a Pull Request for practice | [Link](https://github.com/jeturgavli/open-source-practice) |
 | PDF_MERGE_PROGRAM | Merge multiple PDF files effortlessly with this Python program 📎. Simply provide the folder path, and watch as it combines your PDFs into one cohesive document. Easy to use and efficient, it streamlines your PDF merging tasks. 🚀🐍😎 | [Link](https://github.com/jeturgavli/PDF_MERGE_PROGRAM) |
 | PDF_PAGE_DELETER | Tired of PDFs cluttered with unnecessary pages? PDF Page Deleter simplifies PDF editing—select your file, specify pages to remove, and save a streamlined version. Easy, efficient, and designed to simplify your document management tasks. | [Link](https://github.com/jeturgavli/PDF_PAGE_DELETER) |
 | Quote-Image-Generator-for-Instagram | This Python script automates the creation of custom Instagram quote images. Choose backgrounds, input text lines, and pick text colors (white or black). Ideal for adding personality to your posts effortlessly. Embrace creativity with fonts and save your creations in the Quotes_Output/ directory. Spice up your Insta-feed with ease! 🎨 | [Link](https://github.com/jeturgavli/Quote-Image-Generator-for-Instagram) |
-| simple-contribution | This is a very simple project to help first-time contributors to easily participate in an open-source project. | [Link](https://github.com/jeturgavli/simple-contribution) |
 | Small_Python_Program | Small 🐍 Python Programs  | [Link](https://github.com/jeturgavli/Small_Python_Program) |
 | Tab-Saver-Chrome-Extension | Tabs Saver (Chrome Extension)  | [Link](https://github.com/jeturgavli/Tab-Saver-Chrome-Extension) |
 | Youtube-Playlist-Downloader | Youtube Playlist Download | Single & Playlist ▶ | [Link](https://github.com/jeturgavli/Youtube-Playlist-Downloader) |
