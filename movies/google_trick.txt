@@ -1,0 +1,14 @@
+Method 1:
+Movie Name -inurl:(htm|html|php|pls|txt) intitle:index.of “last modified” (mp4|wma|aac|avi)
+
+Method 2:
+intitle:index.of? mkv 
+
+Extra Tricks (Some Other Tricks To Find Movie Sites) :
+
+#1 Using Multiple keywords under asterisks
+ex:- “Name” “Movie” “download” “.mp4”
+
+#2 Using the Download Now Keyword
+
+#3 Search for Movie names along with an extension on the URL
