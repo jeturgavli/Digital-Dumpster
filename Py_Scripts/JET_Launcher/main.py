@@ -6,7 +6,7 @@ def read_file_paths(file_list_path):
             paths = [line.strip() for line in f if line.strip()]
         return paths
     except FileNotFoundError:
-        print("Oops! 'file_list.txt' is missing. Please create it and add your file paths.")
+        print(f"Oops! 'file_list.txt' is missing in path: {file_list_path}")
         return []
 
 def display_menu(paths):
@@ -16,7 +16,8 @@ def display_menu(paths):
     print("0. Exit")
 
 def main():
-    file_list_path = "file_list.txt"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_list_path = os.path.join(script_dir, "file_list.txt")
     paths = read_file_paths(file_list_path)
 
     if not paths:
