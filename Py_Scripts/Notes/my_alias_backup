@@ -1,0 +1,20 @@
+bash ~/.jetrock_banner.sh
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias sbi="git checkout -b "
+alias tt="touch "
+alias cls="clear"
+alias clear='clear && bash ~/.jetrock_banner.sh'
+alias sta="git status"
+alias gun="git commit -m "
+alias dodo="git clone "
+alias paa="python "
+alias bhaag="git push"
+alias nikl="rm -rf "
+alias gogo="cat ~/.bashrc "
+alias jkjk="nano ~/.bashrc "
+alias aw="git checkout "
+alias chus="git pull"
+alias qwe="git add ."
+export PATH="$HOME/.local/bin:$PATH"
