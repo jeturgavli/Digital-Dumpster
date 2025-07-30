@@ -1,0 +1,33 @@
+
+
+
+
+
+Highlight Cell Row
+1. Select All Raw
+2. Home > Condition Formating > New Rule
+3. Select a Rule Type : Use a formula to determine which cells to format
+4. Formula values where this formula is true #Botom Formula Pase it
+	=row()=cell("row")
+6. go to Formatt Button
+7. now go to fill Choise Color According You Need Highlight
+	Most Case Use Yellow Color
+8. Then Click "OK" button
+9. Right Click on your sheet and go to View Code
+10. select Worksheet
+	Notes: "You See Below Type of Code"
+	Private Sub Worksheet SelectionChange(ByVal Target As Range)
+	End Sub
+11. just type beetween
+	Target.Calculate
+	Notes: "Now You See Below Type of Code"
+	```
+	Private Sub Worksheet SelectionChange(ByVal Target As Range)
+        Target.Calculate
+	End Sub
+	```
+
+12. Save and Close Now U can See Magic
+
+
+Video TUT URL : https://www.youtube.com/watch?v=yJiygLKrwBc
