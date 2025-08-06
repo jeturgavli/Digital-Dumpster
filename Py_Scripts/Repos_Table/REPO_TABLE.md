@@ -7,6 +7,7 @@
 | Digital-Dumpster | This is my secret stash of digital oddities, where I store everything from fish burgers to other quirky experiments. It’s not fancy, but when I need something, it’s my go-to spot. Think of it as my digital junk drawer – not perfect, but it gets the job done! | [Link](https://github.com/jeturgavli/Digital-Dumpster) |
 | Easy-Coordinate-Converter-DMS-to-DD | Hey there! I'm a 25-year-old coder with a knack for cool projects, working in a forest office. Check out my latest creation: a nifty app that converts DMS coordinates to Decimal Degrees. It's easy to use, and if you need a laugh or a cool feature, I've got you covered! Click the image to visit my GitHub profile and explore more of my work. | [Link](https://github.com/jeturgavli/Easy-Coordinate-Converter-DMS-to-DD) |
 | fake-hack | This project simulates a fun and interactive hacking scenario. | [Link](https://github.com/jeturgavli/fake-hack) |
+| GITHUB_ENHANCER | GITHUB_ENHANCER PROGRAM | [Link](https://github.com/jeturgavli/GITHUB_ENHANCER) |
 | ImageToText | Screenshot Image to Text Data Extract into excel File | [Link](https://github.com/jeturgavli/ImageToText) |
 | jeturgavli | No description | [Link](https://github.com/jeturgavli/jeturgavli) |
 | Office_Work | No description | [Link](https://github.com/jeturgavli/Office_Work) |
@@ -14,5 +15,5 @@
 | PDF_PAGE_DELETER | Tired of PDFs cluttered with unnecessary pages? PDF Page Deleter simplifies PDF editing—select your file, specify pages to remove, and save a streamlined version. Easy, efficient, and designed to simplify your document management tasks. | [Link](https://github.com/jeturgavli/PDF_PAGE_DELETER) |
 | Quote-Image-Generator-for-Instagram | This Python script automates the creation of custom Instagram quote images. Choose backgrounds, input text lines, and pick text colors (white or black). Ideal for adding personality to your posts effortlessly. Embrace creativity with fonts and save your creations in the Quotes_Output/ directory. Spice up your Insta-feed with ease! 🎨 | [Link](https://github.com/jeturgavli/Quote-Image-Generator-for-Instagram) |
 | Tab-Saver-Chrome-Extension | Tabs Saver (Chrome Extension)  | [Link](https://github.com/jeturgavli/Tab-Saver-Chrome-Extension) |
-| youtube_downloader | No description | [Link](https://github.com/jeturgavli/youtube_downloader) |
+| Youtube_Downloader | Youtube_Downloader | [Link](https://github.com/jeturgavli/Youtube_Downloader) |
 <!-- REPOS-END -->
