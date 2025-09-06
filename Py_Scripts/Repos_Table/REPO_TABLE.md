@@ -10,6 +10,7 @@
 | GITHUB_ENHANCER | GITHUB_ENHANCER PROGRAM | [Link](https://github.com/jeturgavli/GITHUB_ENHANCER) |
 | ImageToText | Screenshot Image to Text Data Extract into excel File | [Link](https://github.com/jeturgavli/ImageToText) |
 | jeturgavli | No description | [Link](https://github.com/jeturgavli/jeturgavli) |
+| Mini_Projects | This repository contains small coding projects and experiments in Python and various programming languages. | [Link](https://github.com/jeturgavli/Mini_Projects) |
 | Office_Work | No description | [Link](https://github.com/jeturgavli/Office_Work) |
 | PDF_MERGE_PROGRAM | Merge multiple PDF files effortlessly with this Python program 📎. Simply provide the folder path, and watch as it combines your PDFs into one cohesive document. Easy to use and efficient, it streamlines your PDF merging tasks. 🚀🐍😎 | [Link](https://github.com/jeturgavli/PDF_MERGE_PROGRAM) |
 | PDF_PAGE_DELETER | Tired of PDFs cluttered with unnecessary pages? PDF Page Deleter simplifies PDF editing—select your file, specify pages to remove, and save a streamlined version. Easy, efficient, and designed to simplify your document management tasks. | [Link](https://github.com/jeturgavli/PDF_PAGE_DELETER) |
