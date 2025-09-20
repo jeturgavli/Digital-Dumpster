@@ -8,6 +8,7 @@
 | Easy-Coordinate-Converter-DMS-to-DD | Hey there! I'm a 25-year-old coder with a knack for cool projects, working in a forest office. Check out my latest creation: a nifty app that converts DMS coordinates to Decimal Degrees. It's easy to use, and if you need a laugh or a cool feature, I've got you covered! Click the image to visit my GitHub profile and explore more of my work. | [Link](https://github.com/jeturgavli/Easy-Coordinate-Converter-DMS-to-DD) |
 | fake-hack | This project simulates a fun and interactive hacking scenario. | [Link](https://github.com/jeturgavli/fake-hack) |
 | GITHUB_ENHANCER | GITHUB_ENHANCER PROGRAM | [Link](https://github.com/jeturgavli/GITHUB_ENHANCER) |
+| HOLOPIN_TRACKER | A live web dashboard that continuously tracks Holopin users featured on the homepage, fetches their linked GitHub profiles, and displays each user as a responsive card | [Link](https://github.com/jeturgavli/HOLOPIN_TRACKER) |
 | ImageToText | Screenshot Image to Text Data Extract into excel File | [Link](https://github.com/jeturgavli/ImageToText) |
 | jeturgavli | No description | [Link](https://github.com/jeturgavli/jeturgavli) |
 | Mini_Projects | This repository contains small coding projects and experiments in Python and various programming languages. | [Link](https://github.com/jeturgavli/Mini_Projects) |
