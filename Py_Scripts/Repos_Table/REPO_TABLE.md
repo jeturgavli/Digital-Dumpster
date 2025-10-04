@@ -10,6 +10,7 @@
 | GITHUB_ENHANCER | GITHUB_ENHANCER PROGRAM | [Link](https://github.com/jeturgavli/GITHUB_ENHANCER) |
 | HOLOPIN_TRACKER | A live web dashboard that continuously tracks Holopin users featured on the homepage, fetches their linked GitHub profiles, and displays each user as a responsive card | [Link](https://github.com/jeturgavli/HOLOPIN_TRACKER) |
 | ImageToText | Screenshot Image to Text Data Extract into excel File | [Link](https://github.com/jeturgavli/ImageToText) |
+| Jetrock_Gif_Profiles | Just GIF Profiles | [Link](https://github.com/jeturgavli/Jetrock_Gif_Profiles) |
 | jeturgavli | No description | [Link](https://github.com/jeturgavli/jeturgavli) |
 | Mini_Projects | This repository contains small coding projects and experiments in Python and various programming languages. | [Link](https://github.com/jeturgavli/Mini_Projects) |
 | Office_Work | No description | [Link](https://github.com/jeturgavli/Office_Work) |
