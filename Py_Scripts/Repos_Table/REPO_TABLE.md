@@ -15,6 +15,7 @@
 | jeturgavli | No description | [Link](https://github.com/jeturgavli/jeturgavli) |
 | Mini_Projects | This repository contains small coding projects and experiments in Python and various programming languages. | [Link](https://github.com/jeturgavli/Mini_Projects) |
 | Office_Work | No description | [Link](https://github.com/jeturgavli/Office_Work) |
+| Pattern-Lock-Research | Pattern-Lock-Research | [Link](https://github.com/jeturgavli/Pattern-Lock-Research) |
 | PDF_MERGE_PROGRAM | Merge multiple PDF files effortlessly with this Python program 📎. Simply provide the folder path, and watch as it combines your PDFs into one cohesive document. Easy to use and efficient, it streamlines your PDF merging tasks. 🚀🐍😎 | [Link](https://github.com/jeturgavli/PDF_MERGE_PROGRAM) |
 | PDF_PAGE_DELETER | Tired of PDFs cluttered with unnecessary pages? PDF Page Deleter simplifies PDF editing—select your file, specify pages to remove, and save a streamlined version. Easy, efficient, and designed to simplify your document management tasks. | [Link](https://github.com/jeturgavli/PDF_PAGE_DELETER) |
 | Quote-Image-Generator-for-Instagram | This Python script automates the creation of custom Instagram quote images. Choose backgrounds, input text lines, and pick text colors (white or black). Ideal for adding personality to your posts effortlessly. Embrace creativity with fonts and save your creations in the Quotes_Output/ directory. Spice up your Insta-feed with ease! 🎨 | [Link](https://github.com/jeturgavli/Quote-Image-Generator-for-Instagram) |
