@@ -1,46 +1,56 @@
-Sub FormatAmountNumber()
+Sub FormatAmountNumber_A48_A54()
     Dim ws As Worksheet
     Dim c As Range
     Dim txt As String
     Dim i As Long, startPos As Long, lengthNum As Long
+    Dim targetCells As Variant
+    Dim addr As Variant
+    
+    targetCells = Array("A48", "A54")    'Cells to process
     
     For Each ws In ThisWorkbook.Worksheets
         
-        Set c = ws.Range("A48")
-        txt = c.Value
-        
-        If Len(txt) = 0 Then GoTo NextSheet
-        
-        ' Find first digit in the text  
-        startPos = 0
-        For i = 1 To Len(txt)
-            If Mid(txt, i, 1) Like "[0-9]" Then
-                startPos = i
-                Exit For
+        For Each addr In targetCells
+            
+            Set c = ws.Range(addr)
+            txt = c.Value
+            
+            If Len(txt) = 0 Then GoTo NextCell
+            
+            ' Find first digit in the text
+            startPos = 0
+            For i = 1 To Len(txt)
+                If Mid(txt, i, 1) Like "[0-9]" Then
+                    startPos = i
+                    Exit For
+                End If
+            Next i
+            
+            If startPos = 0 Then GoTo NextCell
+            
+            ' Count full number length (digits only)
+            lengthNum = 0
+            For i = startPos To Len(txt)
+                If Mid(txt, i, 1) Like "[0-9]" Then
+                    lengthNum = lengthNum + 1
+                Else
+                    Exit For
+                End If
+            Next i
+            
+            'Apply formatting
+            If lengthNum > 0 Then
+                With c.Characters(startPos, lengthNum).Font
+                    .Bold = True
+                    .Name = "Calibri"
+                End With
             End If
-        Next i
-        
-        If startPos = 0 Then GoTo NextSheet
-        
-        ' Count full number length (digits only)
-        lengthNum = 0
-        For i = startPos To Len(txt)
-            If Mid(txt, i, 1) Like "[0-9]" Then
-                lengthNum = lengthNum + 1
-            Else
-                Exit For
-            End If
-        Next i
-        
-        If lengthNum > 0 Then
-            With c.Characters(startPos, lengthNum).Font
-                .Bold = True
-                .Name = "Calibri"
-            End With
-        End If
 
+NextCell:
+        Next addr
+        
 NextSheet:
     Next ws
-
-    MsgBox "Done — Numbers formatted.", vbInformation
+    
+    MsgBox "Done — A48 and A54 numbers formatted.", vbInformation
 End Sub
