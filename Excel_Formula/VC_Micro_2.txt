@@ -1,0 +1,35 @@
+Sub CopyPasteValues_A48_A54_AllSheets()
+    On Error GoTo ErrHandler
+    
+    Dim ws As Worksheet
+    Dim targetCells As Variant
+    Dim addr As Variant
+    Dim c As Range
+    
+    ' Cells to process
+    targetCells = Array("A48", "A54")
+    
+    For Each ws In ThisWorkbook.Worksheets
+        
+        For Each addr In targetCells
+            
+            Set c = ws.Range(addr)
+            
+            ' Skip if empty
+            If Trim(c.Value) <> "" Then
+                c.Copy
+                c.PasteSpecial Paste:=xlPasteValues
+            End If
+            
+        Next addr
+
+    Next ws
+
+    Application.CutCopyMode = False
+    
+    MsgBox "Done! A48 and A54 paste-values applied for all sheets.", vbInformation
+    Exit Sub
+    
+ErrHandler:
+    MsgBox "Error: " & Err.Description, vbCritical, "Macro Error"
+End Sub
