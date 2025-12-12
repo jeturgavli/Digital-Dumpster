@@ -1,0 +1,46 @@
+Sub FormatAmountNumber()
+    Dim ws As Worksheet
+    Dim c As Range
+    Dim txt As String
+    Dim i As Long, startPos As Long, lengthNum As Long
+    
+    For Each ws In ThisWorkbook.Worksheets
+        
+        Set c = ws.Range("A48")
+        txt = c.Value
+        
+        If Len(txt) = 0 Then GoTo NextSheet
+        
+        ' Find first digit in the text  
+        startPos = 0
+        For i = 1 To Len(txt)
+            If Mid(txt, i, 1) Like "[0-9]" Then
+                startPos = i
+                Exit For
+            End If
+        Next i
+        
+        If startPos = 0 Then GoTo NextSheet
+        
+        ' Count full number length (digits only)
+        lengthNum = 0
+        For i = startPos To Len(txt)
+            If Mid(txt, i, 1) Like "[0-9]" Then
+                lengthNum = lengthNum + 1
+            Else
+                Exit For
+            End If
+        Next i
+        
+        If lengthNum > 0 Then
+            With c.Characters(startPos, lengthNum).Font
+                .Bold = True
+                .Name = "Calibri"
+            End With
+        End If
+
+NextSheet:
+    Next ws
+
+    MsgBox "Done — Numbers formatted.", vbInformation
+End Sub
