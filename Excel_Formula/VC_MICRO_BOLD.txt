@@ -1,0 +1,59 @@
+Sub Bold_Number_In_Text_A48_A54_AllSheets()
+
+    Dim ws As Worksheet
+    Dim c As Range
+    Dim txt As String
+    Dim i As Long, startPos As Long, lengthNum As Long
+    Dim targetCells As Variant, addr As Variant
+    Dim ch As String
+
+    targetCells = Array("A48", "A54")
+
+    For Each ws In ThisWorkbook.Worksheets
+        
+        For Each addr In targetCells
+            
+            Set c = ws.Range(addr)
+            txt = c.Value
+            
+            If Trim(txt) = "" Then GoTo NextCell
+            
+            startPos = 0
+            lengthNum = 0
+            
+            ' Find first digit
+            For i = 1 To Len(txt)
+                ch = Mid(txt, i, 1)
+                If ch Like "[0-9]" Then
+                    startPos = i
+                    Exit For
+                End If
+            Next i
+            
+            If startPos = 0 Then GoTo NextCell
+            
+            ' Count digits and / -
+            For i = startPos To Len(txt)
+                ch = Mid(txt, i, 1)
+                If ch Like "[0-9]" Or ch = "/" Or ch = "-" Then
+                    lengthNum = lengthNum + 1
+                Else
+                    Exit For
+                End If
+            Next i
+            
+            ' Apply Bold
+            If lengthNum > 0 Then
+                With c.Characters(startPos, lengthNum).Font
+                    .Bold = True
+                End With
+            End If
+
+NextCell:
+        Next addr
+        
+    Next ws
+
+    MsgBox "Done! Numbers in A48 & A54 are now bold.", vbInformation
+
+End Sub
